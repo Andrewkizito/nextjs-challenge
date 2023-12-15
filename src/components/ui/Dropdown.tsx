@@ -1,6 +1,7 @@
 "use client";
 
 import React, { Dispatch, SetStateAction, useMemo, useState } from "react";
+import { IoChevronDown } from "react-icons/io5";
 
 interface Option {
   title: string;
@@ -43,13 +44,11 @@ const Dropdown: React.FC<DropdownProps> = ({ options, active, setActive }) => {
         >
           {activeOption.count}
         </span>
-        <span
-          className={`material-symbols-outlined text-2xl text-gray-800 duration-300 ${
+        <IoChevronDown
+          className={`text-lg text-gray-800 duration-300 ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
-        >
-          expand_more
-        </span>
+        />
       </div>
       <div
         className={`origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 duration-300 z-10 ${

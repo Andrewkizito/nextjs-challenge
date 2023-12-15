@@ -9,7 +9,7 @@ const Button: React.FC<ButtonProps> = ({ variant, ...rest }) => {
     styles = "bg-primary text-white hover:bg-opacity-50";
   }
 
-  return <button className={`py-2 px-5 rounded-md duration-300 text-semibold ${styles}`} {...rest} />;
+  return <button className={`py-2 px-5 rounded-md duration-300 font-medium ${styles}`} {...rest} />;
 };
 
 export default Button;

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 // UI Components
+import { IoSearchOutline } from "react-icons/io5";
 import Backdrop from "../ui/Backdrop";
 import Container from "@/components/Container";
 import Image from "next/image";
@@ -28,7 +29,7 @@ const Header = () => {
           <div className="flex items-center gap-14 max-lg:gap-10">
             <div className="flex items-center w-96 border border-gray-300 rounded max-md:hidden max-lg:w-48">
               <div className="h-12 px-5 flex items-center justify-center">
-                <span className="material-symbols-outlined">search</span>
+                <IoSearchOutline className="text-xl"/>
               </div>
               <input
                 type="text"

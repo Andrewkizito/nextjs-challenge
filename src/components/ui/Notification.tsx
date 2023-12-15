@@ -1,4 +1,5 @@
 // UI Components
+import { IoCardOutline } from "react-icons/io5";
 import Button from "./Button";
 import Image from "next/image";
 
@@ -13,7 +14,7 @@ interface NotificationItemProps {
 
 const NotificationItem: React.FC<NotificationItemProps> = ({
   item,
-  isMini
+  isMini,
 }) => {
   return (
     <div
@@ -33,9 +34,19 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
         </div>
       )}
       <div>
-        <h3 className={`font-medium max-sm:text-base ${isMini ? "text-base" : "text-xl"}`}>{item.title}</h3>
+        <h3
+          className={`font-medium max-sm:text-base ${
+            isMini ? "text-base" : "text-xl"
+          }`}
+        >
+          {item.title}
+        </h3>
         {(item.subtext || item.isCharge) && (
-          <div className={`text-gray-600 font-medium flex items-center gap-2 max-sm:text-sm ${isMini ? "text-sm mt-1" : "mt-1"}`}>
+          <div
+            className={`text-gray-600 font-medium flex items-center gap-2 max-sm:text-sm ${
+              isMini ? "text-sm mt-1" : "mt-1"
+            }`}
+          >
             {item.amount && (
               <>
                 <span className="font-semibold">${item.amount}</span>
@@ -48,9 +59,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
               </>
             )}
             {item.isCharge && (
-              <span className="material-symbols-outlined text-primary">
-                credit_card
-              </span>
+              <IoCardOutline className="text-2xl text-primary" />
             )}
             <p>{item.subtext || item.isCharge?.text}</p>
           </div>
@@ -61,7 +70,11 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
             <Button variant="plain">Decline</Button>
           </div>
         )}
-        <p className={`absolute bottom-4 right-4 font-medium text-gray-500 max-sm:text-sm max-sm:right-2 max-sm:bottom-2 ${isMini && "text-sm"}`}>
+        <p
+          className={`absolute bottom-4 right-4 font-medium text-gray-500 max-sm:text-sm max-sm:right-2 max-sm:bottom-2 ${
+            isMini && "text-sm"
+          }`}
+        >
           {item.timeElapsed}
         </p>
       </div>
