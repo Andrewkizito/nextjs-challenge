@@ -48,10 +48,20 @@ const Header = () => {
                     <NavItem route={route} />
                   </Link>
                   {route.dropdown && route.path === "/notifications" && (
-                    <div className="absolute top-[133%] right-0 border border-gray-200 w-100 h-auto bg-white z-20">
+                    <div className="absolute top-[133%] right-0 border border-gray-200 w-wide h-auto bg-white z-20 opacity-0 invisible translate-y-5 duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
                       {route.dropdown.items.map((item, i) => (
-                        <NotificationItem isMini key={i} item={item} active="" />
+                        <NotificationItem
+                          isMini
+                          key={i}
+                          item={item}
+                          active=""
+                        />
                       ))}
+                      <Link href={route.path}>
+                        <button className="bg-primary border-none text-gray-800 font-semibold py-3 text-sm w-full bg-opacity-20 duration-300 hover:bg-opacity-50">
+                          See All
+                        </button>
+                      </Link>
                     </div>
                   )}
                 </li>
