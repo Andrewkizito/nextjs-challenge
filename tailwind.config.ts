@@ -15,6 +15,9 @@ const config: Config = {
       gap: {
         "0.5": "0.125rem",
       },
+      padding: {
+        "0.5": "0.125rem",
+      },
     },
   },
   plugins: [],
