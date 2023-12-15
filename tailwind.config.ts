@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         primary: "#cc0087",
         "white-shade": "#fcf8f7",
+        "primary-soft": "rgba(241, 184, 221, 0.78)",
       },
       gap: {
         "0.5": "0.125rem",
@@ -24,6 +25,7 @@ const config: Config = {
       width: {
         "98": "392px",
         "100": "400px",
+        "wide": "480px"
       },
     },
   },
