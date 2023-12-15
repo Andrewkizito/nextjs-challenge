@@ -23,7 +23,7 @@ const BookingDetails = () => {
     <div className="border-l border-r border-gray-200 min-h-screen max-w-3xl px-0 mx-auto">
       <div className="p-8 border-b border-gray-200">
         <h3 className="text-lg font-semibold">Booking Details.</h3>
-        <div className="mt-4 flex items-center gap-5 max-sm:flex-col max-sm:items-start">
+        <div className="mt-10 flex items-center gap-5 max-sm:flex-col max-sm:items-start max-sm:mt-7">
           <Image
             src={booking_data.imageSrc}
             alt="logo"
@@ -62,7 +62,7 @@ const BookingDetails = () => {
             </div>
           </div>
         </div>
-        <div className="mt-4 flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-2">
+        <div className="mt-7 flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-2 max-sm:mt-5">
           <IconText title={booking_data.date} icon={"calendar_month"} />
           <div className="flex items-center gap-8">
             <IconText title={booking_data.time} icon={"schedule"} />
