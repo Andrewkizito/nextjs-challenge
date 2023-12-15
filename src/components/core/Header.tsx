@@ -65,6 +65,7 @@ const Header = () => {
         open={openSidebar}
         routes={appRoutes}
         activePathname={pathname}
+        onClose={setOpen}
       />
     </>
   );
