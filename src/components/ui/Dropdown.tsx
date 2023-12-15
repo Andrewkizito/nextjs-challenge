@@ -52,7 +52,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options, active, setActive }) => {
       </div>
       <div
         className={`origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 duration-300 z-10 ${
-          isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+          isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible"
         }`}
       >
         <div>
