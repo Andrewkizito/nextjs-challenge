@@ -7,9 +7,7 @@ const Policies: React.FC<{ policies: Policy[] }> = ({ policies }) => {
       {policies.map((item, i) => (
         <div key={i}>
           <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-2xl text-primary">
-              {item.icon}
-            </span>
+            <item.icon className="text-2xl text-primary" />
             <h4 className="text-gray-800 font-bold">{item.title}</h4>
           </div>
           <p className="text-gray-500 font-medium">{item.description}</p>

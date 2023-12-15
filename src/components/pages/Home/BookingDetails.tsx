@@ -1,4 +1,5 @@
 // UI Components
+import { IoCalendarOutline, IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import CostSummary from "./CostSummary";
 import Image from "next/image";
 import IconText from "@/components/IconText";
@@ -13,7 +14,6 @@ import data from "./data";
 
 // Types
 import { BookingData } from "@/utils/types";
-import { IoCalendarOutline, IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 
 const font = Playfair_Display({ subsets: ["latin"], weight: "600" });
 

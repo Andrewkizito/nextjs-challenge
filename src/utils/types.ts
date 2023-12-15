@@ -1,6 +1,9 @@
+// Types
+import { IconType } from "react-icons";
+
 interface Policy {
   title: string;
-  icon: string;
+  icon: IconType;
   description: string;
 }
 
