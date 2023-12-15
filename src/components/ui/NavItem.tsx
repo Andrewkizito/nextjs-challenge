@@ -8,7 +8,7 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ route }) => {
   return (
     <>
-      <span className="material-symbols-outlined text-2xl">{route.icon}</span>
+      <route.icon className="text-2xl" />
       <span className="text-sm font-medium">{route.name}</span>
     </>
   );

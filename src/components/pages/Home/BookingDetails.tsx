@@ -9,10 +9,11 @@ import { Playfair_Display } from "next/font/google";
 
 // Utils
 import classNames from "classnames";
-import data from "./data.json";
+import data from "./data";
 
 // Types
 import { BookingData } from "@/utils/types";
+import { IoCalendarOutline, IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 
 const font = Playfair_Display({ subsets: ["latin"], weight: "600" });
 
@@ -63,10 +64,10 @@ const BookingDetails = () => {
           </div>
         </div>
         <div className="mt-7 flex items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:gap-2 max-sm:mt-5">
-          <IconText title={booking_data.date} icon={"calendar_month"} />
+          <IconText title={booking_data.date} icon={IoCalendarOutline} />
           <div className="flex items-center gap-8">
-            <IconText title={booking_data.time} icon={"schedule"} />
-            <IconText title={booking_data.location} icon={"location_on"} />
+            <IconText title={booking_data.time} icon={IoTimeOutline} />
+            <IconText title={booking_data.location} icon={IoLocationOutline} />
           </div>
         </div>
       </div>
