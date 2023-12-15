@@ -4,6 +4,7 @@ import Link from "next/link";
 // Types
 import { Route } from "@/utils/routes";
 import { Dispatch, SetStateAction } from "react";
+import { IoMenuOutline } from "react-icons/io5";
 
 interface SidebarProps {
   open: boolean;
@@ -25,12 +26,10 @@ const Sidebar: React.FC<SidebarProps> = ({
       }`}
     >
       <div className="relative">
-        <span
-          className="material-symbols-outlined absolute right-0 text-2xl text-gray-700"
+        <IoMenuOutline
+          className="absolute right-0 text-2xl text-gray-700"
           onClick={() => onClose(false)}
-        >
-          close
-        </span>
+        />
         <ul className="flex flex-col gap-4 items-start">
           {routes.map((route) => (
             <li key={route.name}>
