@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         primary: "#cc0087",
       },
+      gap: {
+        '0.5': '0.125rem',
+      }
     },
   },
   plugins: [],
