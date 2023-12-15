@@ -27,4 +27,6 @@ const appRoutes: Route[] = [
   },
 ];
 
+export type { Route }
+
 export default appRoutes;
