@@ -27,6 +27,7 @@ interface Notification {
   isCharge?: {
     text: string;
   };
+  unread?: boolean;
   hasActions?: boolean;
 }
 

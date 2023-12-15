@@ -9,6 +9,8 @@ import Backdrop from "../ui/Backdrop";
 import Container from "@/components/Container";
 import Image from "next/image";
 import Link from "next/link";
+import NavItem from "../ui/NavItem";
+import NotificationItem from "../ui/Notification";
 import Sidebar from "./Sidebar";
 
 // Utils
@@ -36,18 +38,22 @@ const Header = () => {
             </div>
             <ul className="flex items-center gap-10 max-md:hidden max-lg:gap-5">
               {appRoutes.map((route) => (
-                <li key={route.name}>
+                <li key={route.name} className="relative group">
                   <Link
-                    href={route.path}
+                    href={route.dropdown ? "#" : route.path}
                     className={`flex flex-col items-center justify-center gap-0.5 duration-300 hover:text-primary ${
                       pathname === route.path ? "text-primary" : "text-gray-500"
                     }`}
                   >
-                    <span className="material-symbols-outlined text-2xl">
-                      {route.icon}
-                    </span>
-                    <span className="text-sm font-medium">{route.name}</span>
+                    <NavItem route={route} />
                   </Link>
+                  {route.dropdown && route.path === "/notifications" && (
+                    <div className="absolute top-[133%] right-0 border border-gray-200 w-100 h-auto bg-white z-20">
+                      {route.dropdown.items.map((item, i) => (
+                        <NotificationItem isMini key={i} item={item} active="" />
+                      ))}
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>

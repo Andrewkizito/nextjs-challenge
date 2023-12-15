@@ -8,16 +8,17 @@ import type { Notification } from "@/utils/types";
 interface NotificationItemProps {
   active: string;
   item: Notification;
+  isMini?: boolean;
 }
 
 const NotificationItem: React.FC<NotificationItemProps> = ({
   item,
-  active,
+  isMini
 }) => {
   return (
     <div
       className={`p-5 flex items-center gap-4 border-b border-gray-200 duration-300 relative ${
-        item.type === active ? "bg-gray-100" : ""
+        item.unread ? "bg-gray-100" : ""
       }`}
     >
       {item.avatar && (
@@ -32,9 +33,9 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
         </div>
       )}
       <div>
-        <h3 className="text-xl font-medium max-sm:text-base">{item.title}</h3>
+        <h3 className={`font-medium max-sm:text-base ${isMini ? "text-base" : "text-xl"}`}>{item.title}</h3>
         {(item.subtext || item.isCharge) && (
-          <div className="text-gray-600 font-medium flex items-center gap-2 max-sm:text-sm mt-2">
+          <div className={`text-gray-600 font-medium flex items-center gap-2 max-sm:text-sm ${isMini ? "text-sm mt-1" : "mt-1"}`}>
             {item.amount && (
               <>
                 <span className="font-semibold">${item.amount}</span>
@@ -60,7 +61,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
             <Button variant="plain">Decline</Button>
           </div>
         )}
-        <p className="absolute bottom-4 right-4 font-medium text-gray-500 max-sm:text-sm max-sm:right-2 max-sm:bottom-2">
+        <p className={`absolute bottom-4 right-4 font-medium text-gray-500 max-sm:text-sm max-sm:right-2 max-sm:bottom-2 ${isMini && "text-sm"}`}>
           {item.timeElapsed}
         </p>
       </div>

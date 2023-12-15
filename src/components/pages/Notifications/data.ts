@@ -9,6 +9,7 @@ const notifications: Notification[] = [
     type: "business",
     avatar: "/eclipse.png",
     timeElapsed: "5m",
+    unread: true,
   },
   {
     title: "Deposit sent to Jane's beauty Parlour for medium short braids.",
@@ -16,6 +17,7 @@ const notifications: Notification[] = [
     amount: 50,
     type: "business",
     timeElapsed: "10m",
+    unread: true,
   },
   {
     title: "Rebecca Wright  sent you a message.",
@@ -23,6 +25,7 @@ const notifications: Notification[] = [
     type: "personal",
     avatar: "/user.jpeg",
     timeElapsed: "20m",
+    unread: true,
   },
   {
     title: "You have cancelled your Natural glam look appointment.",

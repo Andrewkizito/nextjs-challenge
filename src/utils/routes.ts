@@ -1,7 +1,12 @@
+import notifications from "@/page-components/Notifications/data";
+
 interface Route {
   name: string;
   path: string;
   icon: string;
+  dropdown?: {
+    items: any[];
+  };
 }
 
 const appRoutes: Route[] = [
@@ -24,9 +29,12 @@ const appRoutes: Route[] = [
     name: "Notifications",
     path: "/notifications",
     icon: "notifications_unread",
+    dropdown: {
+      items: notifications.slice(0,6),
+    },
   },
 ];
 
-export type { Route }
+export type { Route };
 
 export default appRoutes;

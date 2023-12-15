@@ -21,6 +21,10 @@ const config: Config = {
       heading: {
         "0.5": "0.125rem",
       },
+      width: {
+        "98": "392px",
+        "100": "400px",
+      },
     },
   },
   plugins: [],
