@@ -42,9 +42,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     : "text-gray-500"
                 }`}
               >
-                <span className="material-symbols-outlined text-lg">
-                  {route.icon}
-                </span>
+                <route.icon className="text-lg" />
                 <span className="text-sm font-medium">{route.name}</span>
               </Link>
             </li>
