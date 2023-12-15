@@ -17,4 +17,17 @@ interface BookingData {
   policies: Policy[];
 }
 
-export type { BookingData, Policy };
+interface Notification {
+  type: "personal" | "business";
+  title: string;
+  timeElapsed: string;
+  subtext?: string;
+  amount?: number;
+  avatar?: string;
+  isCharge?: {
+    text: string;
+  };
+  hasActions?: boolean;
+}
+
+export type { BookingData, Policy, Notification };
