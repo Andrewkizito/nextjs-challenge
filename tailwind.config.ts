@@ -10,10 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#cc0087",
+        "white-shade": "#fcf8f7",
       },
       gap: {
-        '0.5': '0.125rem',
-      }
+        "0.5": "0.125rem",
+      },
     },
   },
   plugins: [],
