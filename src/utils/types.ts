@@ -14,7 +14,7 @@ interface BookingData {
   date: string;
   time: string;
   location: string;
-  policies: Policy[]
+  policies: Policy[];
 }
 
-export type { BookingData };
+export type { BookingData, Policy };
