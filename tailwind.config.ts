@@ -18,6 +18,9 @@ const config: Config = {
       padding: {
         "0.5": "0.125rem",
       },
+      heading: {
+        "0.5": "0.125rem",
+      },
     },
   },
   plugins: [],
