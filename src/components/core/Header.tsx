@@ -25,7 +25,9 @@ const Header = () => {
     <>
       <div className="h-24 shadow-sm border-b border-gray-300 flex items-center justify-center fixed w-full z-20 bg-white max-md:h-16">
         <Container className="flex items-center justify-between">
-          <Image src="/logo.png" alt="logo" width={100} height={100} />
+          <Link href="/">
+            <Image src="/logo.png" alt="logo" width={100} height={100} />
+          </Link>
           <div className="flex items-center gap-14 max-lg:gap-10">
             <div className="flex items-center w-96 border border-gray-300 rounded max-md:hidden max-lg:w-48">
               <div className="h-12 px-5 flex items-center justify-center">

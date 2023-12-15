@@ -9,6 +9,7 @@ import NotificationItem from "@/components/Notification";
 
 // Utils
 import notifications from "./data";
+import { Fade } from "react-awesome-reveal";
 
 const NotificationsView = () => {
   const [active, setActive] = useState<string>("personal");
@@ -39,7 +40,9 @@ const NotificationsView = () => {
         <Dropdown options={options} active={active} setActive={setActive} />
       </div>
       {notifications.map((item, i) => (
-        <NotificationItem key={i} item={item} active={active} />
+        <Fade direction="up" key={i} delay={i * 200}>
+          <NotificationItem item={item} active={active} />
+        </Fade>
       ))}
     </div>
   );

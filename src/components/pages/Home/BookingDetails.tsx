@@ -1,3 +1,4 @@
+"use client"
 // UI Components
 import { IoCalendarOutline, IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import CostSummary from "./CostSummary";
